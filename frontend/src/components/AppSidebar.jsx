@@ -86,7 +86,10 @@ function Logo() {
     const { open, animate } = useSidebar();
 
     return (
-        <div className="flex items-center gap-3 py-2 px-1 group">
+        <div className={cn(
+            "flex items-center gap-3 py-2 group",
+            !open && animate ? "px-0 justify-center" : "px-1 justify-start"
+        )}>
             <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center p-1.5 rounded-xl group-hover:scale-110 transition-transform">
                 <img src="/speed.png" alt="careerpilot" className="w-full h-full object-contain" />
             </div>
@@ -153,8 +156,8 @@ function UserSection() {
             <SidebarDivider />
             <div
                 className={cn(
-                    "flex items-center gap-3 p-3 rounded-2xl bg-muted/50 border border-border transition-all hover:bg-muted",
-                    !open && animate && "justify-center"
+                    "flex items-center gap-3 rounded-2xl bg-muted/50 border border-border transition-all hover:bg-muted",
+                    !open && animate ? "p-2 justify-center" : "p-3"
                 )}
             >
                 <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0 border border-primary/20">
@@ -177,8 +180,8 @@ function UserSection() {
             <button
                 onClick={toggleTheme}
                 className={cn(
-                    "flex items-center gap-3 w-full py-3 px-4 rounded-2xl text-muted-foreground hover:text-foreground hover:bg-muted transition-all cursor-pointer font-bold",
-                    !open && animate && "justify-center"
+                    "flex items-center gap-3 w-full py-3 rounded-2xl text-muted-foreground hover:text-foreground hover:bg-muted transition-all cursor-pointer font-bold",
+                    !open && animate ? "px-0 justify-center" : "px-4 justify-start"
                 )}
             >
                 {theme === 'dark' ? <Sun className="w-5 h-5 flex-shrink-0" /> : <Moon className="w-5 h-5 flex-shrink-0" />}
@@ -218,8 +221,8 @@ function UserSection() {
                     setOpen(false);
                 }}
                 className={cn(
-                    "flex items-center gap-3 w-full py-3 px-4 rounded-2xl text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-all cursor-pointer font-bold",
-                    !open && animate && "justify-center"
+                    "flex items-center gap-3 w-full py-3 rounded-2xl text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-all cursor-pointer font-bold",
+                    !open && animate ? "px-0 justify-center" : "px-4 justify-start"
                 )}
             >
                 <LogOut className="w-5 h-5 flex-shrink-0" />

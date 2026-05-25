@@ -7,7 +7,7 @@
   </p>
 
   <p align="center"> 
-    <a href="https://github.com/ishwari418/career-pilot/blob/main/LICENSE">
+    <a href="https://github.com/anurag3407/career-pilot/blob/main/LICENSE">
       <img src="https://img.shields.io/badge/License-MIT-0052CC?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License" />
     </a>
     <img src="https://img.shields.io/badge/Node.js-18+-0066FF?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
@@ -269,20 +269,26 @@ Backend runs on:
 http://localhost:5001
 ```
 
----
-
-### Terminal 2 — Frontend
-
-```bash
+# Terminal 2 — Frontend
 cd frontend
 npm run dev
 ```
 
-Frontend runs on:
+After starting both servers:
 
-```text
-http://localhost:5173
-```
+- Frontend runs on: `http://localhost:5173`
+- Backend runs on: `http://localhost:5001`
+
+---
+
+### Verify Installation
+
+After starting both frontend and backend servers:
+
+- Open `http://localhost:5173`
+- Verify the frontend loads successfully
+- Check backend logs for database/API connection errors
+- Ensure Firebase and MongoDB connections initialize correctly
 
 ---
 

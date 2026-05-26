@@ -1,3 +1,16 @@
+# [1.24.0](https://github.com/anurag3407/career-pilot/compare/v1.23.0...v1.24.0) (2026-05-26)
+
+
+### Bug Fixes
+
+* clean up template gallery tags and import geometric preview ([8be4a1b](https://github.com/anurag3407/career-pilot/commit/8be4a1b3753e21d1090c71b4dbc70790d1a71e46))
+* clean up template gallery tags and import geometric preview ([e29a54a](https://github.com/anurag3407/career-pilot/commit/e29a54a867d9c7e6ea7e03a40f6e5314a39b97bb))
+
+
+### Features
+
+* **Holographic:** implement About section with premium 3D cyber-glass aesthetic ([17d4c71](https://github.com/anurag3407/career-pilot/commit/17d4c715e160ad3431a849c8bd567866d1b8be07))
+
 # [1.23.0](https://github.com/anurag3407/career-pilot/compare/v1.22.1...v1.23.0) (2026-05-26)
 
 

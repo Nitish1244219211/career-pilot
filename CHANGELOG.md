@@ -1,3 +1,31 @@
+# [1.34.0](https://github.com/anurag3407/career-pilot/compare/v1.33.1...v1.34.0) (2026-05-27)
+
+
+### Features
+
+* implement Weather Mood portfolio template with time-of-day theming ([5685543](https://github.com/anurag3407/career-pilot/commit/56855431d6607d559d7c12c8d64680eb0f96d2ae))
+* register Weather Mood template in TemplateGallery ([bf7b91d](https://github.com/anurag3407/career-pilot/commit/bf7b91d1061a1e7704460124ed95dc02bfbb606b))
+
+## [1.33.1](https://github.com/anurag3407/career-pilot/compare/v1.33.0...v1.33.1) (2026-05-27)
+
+
+### Bug Fixes
+
+* resolve package conflicts and Matte Clay template syntax ([c356517](https://github.com/anurag3407/career-pilot/commit/c3565174a642d78828fdefd4de6b0f18010c6ed8))
+
+# [1.33.0](https://github.com/anurag3407/career-pilot/compare/v1.32.0...v1.33.0) (2026-05-27)
+
+
+### Features
+
+* Add Day Night Cycle portfolio template ([a0b69a0](https://github.com/anurag3407/career-pilot/commit/a0b69a0b8021783336030a5490467d4cd18bc13e))
+* add geometric shapes portfolio template ([5c93629](https://github.com/anurag3407/career-pilot/commit/5c93629a4b82b226cc774355c617329d82a92134))
+* add reusable animated select component ([87db600](https://github.com/anurag3407/career-pilot/commit/87db6008da894395a764cb1aba677265d14b90ec))
+* implement code splitting for improved performance ([129f5d1](https://github.com/anurag3407/career-pilot/commit/129f5d1b2247e27941195d45a5ed7fae49e98b70))
+* implement Sound Reactive portfolio template ([9022840](https://github.com/anurag3407/career-pilot/commit/902284055a46309711bf84e7de160c2332a70df3))
+* improve theme consistency across profile, settings, and security pages ([1a2dd5a](https://github.com/anurag3407/career-pilot/commit/1a2dd5a183bc1859cac758ca4b089d0565d3393e))
+* **portfolio:** build complete Matte Clay portfolio template ([9a1413b](https://github.com/anurag3407/career-pilot/commit/9a1413b4a3ab659814d1161223b49a3d3a86d4a9))
+
 # [1.32.0](https://github.com/anurag3407/career-pilot/compare/v1.31.1...v1.32.0) (2026-05-26)
 
 

@@ -1,3 +1,10 @@
+# [1.41.0](https://github.com/anurag3407/career-pilot/compare/v1.40.0...v1.41.0) (2026-05-27)
+
+
+### Features
+
+* add cyberpunk resume CTA section ([1185201](https://github.com/anurag3407/career-pilot/commit/1185201c70c4fc8a6027708fc5dccb90c1d8683b))
+
 # [1.40.0](https://github.com/anurag3407/career-pilot/compare/v1.39.0...v1.40.0) (2026-05-27)
 
 

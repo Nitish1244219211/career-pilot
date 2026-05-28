@@ -1,3 +1,10 @@
+# [1.71.0](https://github.com/anurag3407/career-pilot/compare/v1.70.0...v1.71.0) (2026-05-28)
+
+
+### Features
+
+* implement complete Cherry Blossom portfolio template ([2fe8b33](https://github.com/anurag3407/career-pilot/commit/2fe8b33dfbf8ed998765129afd6e90d481eeb1da))
+
 # [1.70.0](https://github.com/anurag3407/career-pilot/compare/v1.69.0...v1.70.0) (2026-05-28)
 
 

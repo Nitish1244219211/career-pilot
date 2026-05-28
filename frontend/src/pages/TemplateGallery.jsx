@@ -11,7 +11,8 @@ import ArchitectureBlueprintHero from "../components/portfolio/templates/Archite
 import GeometricShapesAbout from "../components/portfolio/templates/Geometric_Shapes/About";
 import GeometricShapesHero from "../components/portfolio/templates/Geometric_Shapes/Hero";
 import LiquidGlass from "../components/portfolio/templates/Liquid_Glass/index";
-import PlayingCardsPortfolio from "../components/portfolio/templates/Playing_Cards";
+import PlayingCardsPortfolio from "../components/portfolio/templates/Playing_Cards/index";
+import CherryBlossom from "../components/portfolio/templates/Cherry_Blossom/index";
 import Navbar from '../components/Navbar'
 import { X } from "lucide-react";
 // import Hero from "../components/portfolio/templates/Holographic/Hero";
@@ -374,6 +375,12 @@ export default function TemplateGallery() {
         portfolioTitle={selectedPortfolioTitle}
       />
 
+      <TemplatePreviewModal
+        templateId={previewTemplateId}
+        isOpen={!!previewTemplateId}
+        onClose={() => setPreviewTemplateId(null)}
+      />
+
       {/* Holographic Theme */}
       <div className="mt-12">
         <div className="mb-4 flex items-center gap-3 px-1">
@@ -462,6 +469,19 @@ export default function TemplateGallery() {
         </div>
         <div className="overflow-hidden rounded-2xl border border-emerald-500/20">
           <PlayingCardsPortfolio />
+        </div>
+      </div>
+
+      {/* Cherry Blossom Theme */}
+      <div className="mt-12">
+        <div className="mb-4 flex items-center gap-3 px-1">
+          <span className="rounded-full bg-rose-500/20 px-3 py-1 text-xs font-bold uppercase tracking-widest text-rose-400 border border-rose-500/30">
+            🌸 NEW — Cherry Blossom
+          </span>
+          <h2 className="text-lg font-semibold text-foreground/70">Cherry Blossom Theme — Digital Spring</h2>
+        </div>
+        <div className="overflow-hidden rounded-2xl border border-rose-500/20">
+          <CherryBlossom />
         </div>
       </div>
 

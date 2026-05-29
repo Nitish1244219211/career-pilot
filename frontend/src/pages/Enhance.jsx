@@ -462,21 +462,20 @@ async function getAuthHeaders() {
 }
 
   const handleEnhanceWithAI = async () => {
-  setEnhancing(true)
+setEnhancing(true)
 
-  try {
-    const apiPreferences = {
-      jobRole: jobRole,
-      yearsOfExperience: 0,
-      skills: atsAnalysis?.missingKeywords || [],
-      industry: '',
-      customInstructions: `Focus on improving: ${
-        (atsAnalysis?.improvements || [])
-          .map(i => i.issue)
-          .join(', ') || 'general improvements'
-        }`,
-      profileInfo: {}
-    }
+try {
+  const apiPreferences = {
+    jobRole: jobRole,
+    yearsOfExperience: resume?.yearsOfExperience ?? 0,
+    skills: atsAnalysis?.missingKeywords || [],
+    industry: '',
+    customInstructions: `Focus on improving: ${
+      atsAnalysis?.improvements?.map(i => i.issue).join(', ') ||
+      'general improvements'
+    }`,
+    profileInfo: {}
+  }
 
     // Reset streamed content
     let streamedResume = ''

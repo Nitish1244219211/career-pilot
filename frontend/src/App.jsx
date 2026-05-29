@@ -78,6 +78,8 @@ const GitHubDashboard = lazy(() => import('./pages/GitHubDashboard'));
 const RepoAnalyzerLanding = lazy(() => import('./pages/RepoAnalyzer/Landing'));
 const RepoAnalyzerDashboard = lazy(() => import('./pages/RepoAnalyzer/Dashboard'));
 const RepoAnalyzerWorkspace = lazy(() => import('./pages/RepoAnalyzer/Workspace'));
+const ProjectVisualizerLanding = lazy(() => import('./pages/ProjectVisualizer/Landing'));
+const ProjectVisualizerDashboard = lazy(() => import('./pages/ProjectVisualizer/Dashboard'));
 import ScrollToTop from "./components/ScrollToTop";
 import NorthernFjords from './components/portfolio/templates/Northern_Fjords';
 import RainforestCanopy from './components/portfolio/templates/Rainforest_Canopy/index.jsx';
@@ -344,6 +346,26 @@ function AppRoutes() {
     <ProtectedRoute>
       <Suspense fallback={<LoadingScreen label="Loading Analyzer Workspace..." />}>
         <RepoAnalyzerWorkspace />
+      </Suspense>
+    </ProtectedRoute>
+  } 
+/>
+        <Route 
+  path="/project-visualizer" 
+  element={
+    <ProtectedRoute>
+      <Suspense fallback={<LoadingScreen label="Loading Project Visualizer..." />}>
+        <ProjectVisualizerLanding />
+      </Suspense>
+    </ProtectedRoute>
+  } 
+/>
+        <Route 
+  path="/project-visualizer/dashboard/:sessionId" 
+  element={
+    <ProtectedRoute>
+      <Suspense fallback={<LoadingScreen label="Loading Analysis Dashboard..." />}>
+        <ProjectVisualizerDashboard />
       </Suspense>
     </ProtectedRoute>
   } 

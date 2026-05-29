@@ -330,8 +330,8 @@ useEffect(() => {
         
         <SidebarLink
             link={{
-                label: "Repo Analyzer",
-                href: "/repo-analyzer",
+                label: "Project Visualizer",
+                href: "/project-visualizer",
                 icon: <GitMerge className="w-4 h-4 shrink-0" />,
             }}
             onClick={() => setOpen(false)}

@@ -1,3 +1,15 @@
+# [1.112.0](https://github.com/anurag3407/career-pilot/compare/v1.111.0...v1.112.0) (2026-06-01)
+
+
+### Bug Fixes
+
+* update author to Advik Divekar in templates.js ([e72af9a](https://github.com/anurag3407/career-pilot/commit/e72af9a424fa26d4ab88f56208c2b756f44e0716))
+
+
+### Features
+
+* implement Magnetic Dock portfolio template ([#1889](https://github.com/anurag3407/career-pilot/issues/1889)) ([7e64c2a](https://github.com/anurag3407/career-pilot/commit/7e64c2ac0aac2e3af62a1411c5cb4617c085078a))
+
 # [1.111.0](https://github.com/anurag3407/career-pilot/compare/v1.110.0...v1.111.0) (2026-05-31)
 
 

@@ -1160,12 +1160,13 @@ export const templates = [
     "title": "Magnetic Dock",
     "category": "Portfolio",
     "colorScheme": "Dark",
-    "layout": "Grid",
-    "author": "System",
-    "views": 1096,
-    "rating": 4.5,
+    "layout": "Interactive",
+    "author": "Advik Divekar",
+    "views": 3100,
+    "rating": 4.9,
     "image": "/template-previews/Magnetic_Dock.png",
-    "createdAt": "2026-05-01"
+    "createdAt": "2026-05-31",
+    "isComplete": true
   },
   {
     "id": "Matte_Clay",

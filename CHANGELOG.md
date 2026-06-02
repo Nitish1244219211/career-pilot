@@ -1,3 +1,10 @@
+## [1.126.1](https://github.com/anurag3407/career-pilot/compare/v1.126.0...v1.126.1) (2026-06-02)
+
+
+### Bug Fixes
+
+* **backend:** remove unused multer-storage-cloudinary causing peer dependency conflict ([3d0e056](https://github.com/anurag3407/career-pilot/commit/3d0e056e09cc2c42e501f7c95e4912fef0b34acf))
+
 # [1.126.0](https://github.com/anurag3407/career-pilot/compare/v1.125.0...v1.126.0) (2026-06-01)
 
 

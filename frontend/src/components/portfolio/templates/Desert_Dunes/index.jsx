@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence, useInView, useScroll, useTransform } from 'framer-motion';
+import { Github, Linkedin, Twitter, Mail, MapPin, ExternalLink, Briefcase, ChevronDown, ArrowUpRight, Star, Calendar, Phone, Send, Sun, Wind, Quote } from 'lucide-react';
 import data from '../../../../data/dummy_data.json';
 
 /* ─────────────────────────────────────────────

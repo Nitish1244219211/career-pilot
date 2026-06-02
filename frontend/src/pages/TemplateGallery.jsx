@@ -20,11 +20,12 @@ import MagneticDock from "../components/portfolio/templates/Magnetic_Dock/index"
 import Navbar from '../components/Navbar'
 import { X } from "lucide-react";
 import { useSearchParams } from "react-router-dom";
-// import Hero from "../components/portfolio/templates/Holographic/Hero";
+import HolographicAbout from "../components/portfolio/templates/Holographic/About";
+import GeometricShapesAbout from "../components/portfolio/templates/Geometric_Shapes/About";
+import CulinaryAbout from "../components/portfolio/templates/Culinary_Restaurant/About";
+import TechStartupHero from "../components/portfolio/templates/Tech_Startup/Hero";
 import ChooseAdventurePortfolio from "../components/portfolio/templates/Choose_Adventure/index";
 import WeatherMood from "../components/portfolio/templates/Weather_Mood/index";
-// import RetroProjects from "../components/portfolio/templates/2D_Retro_8bit/Projects";
-// import FantasyRPGProjects from "../components/portfolio/templates/Fantasy_RPG/Projects";
 import MorphingBlobs from "../components/portfolio/templates/Morphing_Blobs/index";
 import OceanDepths from "../components/portfolio/templates/Ocean_Depths/index";
 import NeonCityscape from "../components/portfolio/templates/Neon_Cityscape/index";

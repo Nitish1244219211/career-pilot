@@ -1,3 +1,10 @@
+# [1.139.0](https://github.com/anurag3407/career-pilot/compare/v1.138.0...v1.139.0) (2026-06-04)
+
+
+### Features
+
+* implement Chalkboard Education Hero section ([c972f81](https://github.com/anurag3407/career-pilot/commit/c972f81e6a6187e6c44455e0eb4c13c90a06455d))
+
 # [1.138.0](https://github.com/anurag3407/career-pilot/compare/v1.137.0...v1.138.0) (2026-06-04)
 
 

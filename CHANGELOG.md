@@ -1,3 +1,15 @@
+# [1.167.0](https://github.com/anurag3407/career-pilot/compare/v1.166.0...v1.167.0) (2026-06-06)
+
+
+### Bug Fixes
+
+* apply CodeAnt review fixes to ResumeCTA section ([e522743](https://github.com/anurag3407/career-pilot/commit/e5227430c5b4e608726edce1f2eed454c9f40cf0))
+
+
+### Features
+
+* implement ResumeCTA section for Sports Athletic portfolio template ([4df1c10](https://github.com/anurag3407/career-pilot/commit/4df1c10e881172a3f9e139b4ecaf8e5fcf478d15))
+
 # [1.166.0](https://github.com/anurag3407/career-pilot/compare/v1.165.0...v1.166.0) (2026-06-06)
 
 

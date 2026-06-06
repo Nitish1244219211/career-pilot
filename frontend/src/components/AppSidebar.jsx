@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Brain, ChevronDown, Contrast } from "lucide-react";
+import AIProviderIndicator from "./settings/AIProviderIndicator";
 
 import {
     LayoutDashboard,
@@ -18,13 +19,13 @@ import {
     ShieldCheck,
     Sun,
     Moon,
-    Zap,
     Rocket,
     Briefcase,
     GitMerge
 } from "lucide-react";
 import { useAuth } from "../hooks/useAuth";
 import { useTheme } from "../hooks/useTheme";
+// PKCE utils kept for legacy OpenRouter OAuth callback compatibility
 import { generateRandomString, generateCodeChallenge } from "../utils/pkce";
 import {
     Sidebar,
@@ -126,28 +127,6 @@ function UserSection() {
     const { open, animate, setOpen } = useSidebar();
     const { theme, toggleTheme } = useTheme();
     const navigate = useNavigate();
-    const [openRouterKey, setOpenRouterKey] = useState(null);
-
-    useEffect(() => {
-        setOpenRouterKey(localStorage.getItem('openRouterApiKey'));
-    }, []);
-
-    const handleOpenRouterConnect = async () => {
-        if (openRouterKey) {
-            localStorage.removeItem('openRouterApiKey');
-            setOpenRouterKey(null);
-            return;
-        }
-
-        const verifier = generateRandomString();
-        sessionStorage.setItem('or_code_verifier', verifier);
-        const challenge = await generateCodeChallenge(verifier);
-
-        const callbackUrl = `${window.location.origin}/auth/openrouter/callback`;
-        const openRouterUrl = `https://openrouter.ai/auth?callback_url=${encodeURIComponent(callbackUrl)}&code_challenge=${challenge}&code_challenge_method=S256`;
-
-        window.location.href = openRouterUrl;
-    };
 
     const handleLogout = async () => {
         try {
@@ -212,25 +191,7 @@ function UserSection() {
                      'Light Mode'}
                 </motion.span>
             </button>
-            <button
-                onClick={handleOpenRouterConnect}
-                className={cn(
-                    "flex items-center gap-3 w-full py-3 px-4 rounded-2xl text-muted-foreground hover:text-foreground hover:bg-muted transition-all cursor-pointer font-bold",
-                    !open && animate && "justify-center"
-                )}
-            >
-                <Zap className={cn("w-5 h-5 shrink-0", openRouterKey && "text-indigo-500")} />
-                <motion.span
-                    animate={{
-                        display: animate ? (open ? "inline-block" : "none") : "inline-block",
-                        opacity: animate ? (open ? 1 : 0) : 1,
-                    }}
-                    transition={{ duration: 0.2 }}
-                    className="text-sm font-bold whitespace-pre"
-                >
-                    {openRouterKey ? 'OpenRouter Connected' : 'Connect OpenRouter'}
-                </motion.span>
-            </button>
+            <AIProviderIndicator open={open} animate={animate} />
             <button
                 onClick={() => {
                     handleLogout();

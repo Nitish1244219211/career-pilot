@@ -1,3 +1,15 @@
+# [1.179.0](https://github.com/anurag3407/career-pilot/compare/v1.178.0...v1.179.0) (2026-06-07)
+
+
+### Bug Fixes
+
+* sync package-lock.json with package.json ([534a0dc](https://github.com/anurag3407/career-pilot/commit/534a0dc574d217c84cd72368bf08b95532bd4573))
+
+
+### Features
+
+* add Eye Tracking Heatmap Simulation portfolio template ([7f67468](https://github.com/anurag3407/career-pilot/commit/7f67468376eb80566ebb23c9e9658bdfa17826c7))
+
 # [1.178.0](https://github.com/anurag3407/career-pilot/compare/v1.177.0...v1.178.0) (2026-06-06)
 
 

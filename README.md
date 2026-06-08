@@ -1,12 +1,7 @@
 <div align="center">
   <h1>🚀 Career Pilot</h1>
   <p>An AI-powered resume builder and career toolkit that helps users create resumes, prepare for interviews, search jobs, and launch developer portfolios.</p>
-  <p>
-    <img src="https://img.shields.io/badge/React-19-blue?logo=react&logoColor=white" alt="React 19" />
-    <img src="https://img.shields.io/badge/Vite-7.3.5-brightgreen?logo=vite&logoColor=white" alt="Vite" />
-    <img src="https://img.shields.io/badge/TailwindCSS-4-skyblue?logo=tailwindcss&logoColor=white" alt="TailwindCSS" />
-    <img src="https://img.shields.io/badge/Firebase-auth-orange?logo=firebase&logoColor=white" alt="Firebase" />
-  </p>
+  
 </div>
 
 ## Overview
@@ -35,22 +30,27 @@ The project combines a React + Vite frontend with an Express backend, Firebase a
 
 ## Tech Snapshot
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Node.js-20-green?logo=node.js&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Express-4.18-lightgrey?logo=express&logoColor=black" alt="Express" />
-  <img src="https://img.shields.io/badge/MongoDB-6.0-darkgreen?logo=mongodb&logoColor=white" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/Socket.IO-4-cyan?logo=socket.io&logoColor=white" alt="Socket.IO" />
-</div>
-
-<div align="center">
-  <p style="max-width:800px; margin:8px auto; text-align:center;">
-    Career Pilot combines a polished React frontend with AI providers, cloud-based authentication, real-time collaboration, and reliable resume export workflows.
+<div align="center" style="max-width:900px; margin:12px auto;">
+  <p style="margin-bottom:10px; text-align:center; font-size:1.05rem; color:var(--text-color, #e6edf3);">
+    Career Pilot — full-stack web app combining modern frontend and backend tooling, realtime features, and AI integrations.
   </p>
-  <p style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
+
+  <!-- Primary stack -->
+  <p style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:8px 0;">
+    <img src="https://img.shields.io/badge/Node.js-20-green?logo=node.js&logoColor=white" alt="Node.js" />
+    <img src="https://img.shields.io/badge/Express-4.18-lightgrey?logo=express&logoColor=black" alt="Express" />
+    <img src="https://img.shields.io/badge/MongoDB-6.0-darkgreen?logo=mongodb&logoColor=white" alt="MongoDB" />
+    <img src="https://img.shields.io/badge/Redis-7.0-d9932e?logo=redis&logoColor=white" alt="Redis" />
+    <img src="https://img.shields.io/badge/Socket.IO-4-cyan?logo=socket.io&logoColor=white" alt="Socket.IO" />
+  </p>
+
+  <!-- Frontend & Infra -->
+  <p style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:6px 0 0 0;">
     <img src="https://img.shields.io/badge/React-19-blue?logo=react&logoColor=white" alt="React" />
     <img src="https://img.shields.io/badge/Vite-7.3.5-brightgreen?logo=vite&logoColor=white" alt="Vite" />
-    <img src="https://img.shields.io/badge/TailwindCSS-4-skyblue?logo=tailwindcss&logoColor=white" alt="Tailwind" />
+    <img src="https://img.shields.io/badge/TailwindCSS-4-skyblue?logo=tailwindcss&logoColor=white" alt="TailwindCSS" />
     <img src="https://img.shields.io/badge/Firebase-auth-orange?logo=firebase&logoColor=white" alt="Firebase" />
+    <img src="https://img.shields.io/badge/Cloudinary-Storage-4ea8ff?logo=cloudinary&logoColor=white" alt="Cloudinary" />
   </p>
 </div>
 

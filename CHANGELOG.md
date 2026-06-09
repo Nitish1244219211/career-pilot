@@ -1,3 +1,11 @@
+## [1.198.1](https://github.com/anurag3407/career-pilot/compare/v1.198.0...v1.198.1) (2026-06-09)
+
+
+### Bug Fixes
+
+* add missing LineChart import in AppSidebar.jsx ([c623a8e](https://github.com/anurag3407/career-pilot/commit/c623a8e668271372df9b50924d069dda481642c8))
+* resolve syntax error and duplicate entries in templates.js ([087dcf4](https://github.com/anurag3407/career-pilot/commit/087dcf4028a8094439307935678b560d89ed58ae))
+
 # [1.198.0](https://github.com/anurag3407/career-pilot/compare/v1.197.1...v1.198.0) (2026-06-08)
 
 

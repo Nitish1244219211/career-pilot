@@ -1,3 +1,10 @@
+# [1.200.0](https://github.com/anurag3407/career-pilot/compare/v1.199.0...v1.200.0) (2026-06-09)
+
+
+### Features
+
+* add skill gap visualization dashboard ([2e5fc9c](https://github.com/anurag3407/career-pilot/commit/2e5fc9cb2be5c6878cd126bae1be6e799a78efdb))
+
 # [1.199.0](https://github.com/anurag3407/career-pilot/compare/v1.198.2...v1.199.0) (2026-06-09)
 
 

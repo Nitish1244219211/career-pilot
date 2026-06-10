@@ -432,14 +432,14 @@ useEffect(() => {
   // ── shared input class builder ────────────────────────────────────────────────
   const inputCls = (errorKey, errors = personalErrors) =>
     cn(
-      'w-full bg-muted border rounded-xl px-4 py-2 transition-colors',
+      'w-full border rounded-xl px-4 py-2 transition-colors text-foreground',
       'focus:outline-none focus:ring-2 focus:ring-primary/30',
       errors?.[errorKey] ? 'border-red-500 focus:ring-red-400/30' : 'border-border'
     )
 
   const inputClsArr = (errors) => (errorKey) =>
     cn(
-      'w-full bg-muted border rounded-lg px-4 py-2 transition-colors',
+      'w-full border rounded-lg px-4 py-2 transition-colors text-foreground',
       'focus:outline-none focus:ring-2 focus:ring-primary/30',
       errors?.[errorKey] ? 'border-red-500 focus:ring-red-400/30' : 'border-border'
     )
@@ -1203,7 +1203,7 @@ useEffect(() => {
 
   // ── render ────────────────────────────────────────────────────────────────────
   return (
-    <div className="min-h-screen pt-20 pb-12 bg-background flex flex-col">
+    <div className="dark min-h-screen pt-20 pb-12 flex flex-col" style={{ backgroundColor: 'var(--background)' }}>
       <div className="max-w-4xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex-1 flex flex-col">
 
         {/* Header */}
@@ -1243,7 +1243,7 @@ useEffect(() => {
         </div>
 
         {/* Content Area */}
-        <div className="flex-1 bg-card backdrop-blur-xl border border-border rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+        <div className="flex-1 backdrop-blur-xl border border-border rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden" style={{ backgroundColor: 'var(--card)' }}>
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl opacity-50 pointer-events-none" />
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl opacity-50 pointer-events-none" />
 

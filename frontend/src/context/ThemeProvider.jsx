@@ -18,7 +18,7 @@ export function ThemeProvider({ children }) {
     } catch (e) {
       console.warn('Failed to read from localStorage:', e);
     }
-    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'dark';
   });
 
   useLayoutEffect(() => {

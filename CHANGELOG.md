@@ -1,3 +1,10 @@
+## [1.211.3](https://github.com/anurag3407/career-pilot/compare/v1.211.2...v1.211.3) (2026-06-10)
+
+
+### Bug Fixes
+
+* **ci:** lock osv-scanner-action to verified v1.9.0 path ([3d45ab1](https://github.com/anurag3407/career-pilot/commit/3d45ab121197c546c65f0139c06afeca4c671e06))
+
 # [1.1.0](https://github.com/Gurkaran18/career-pilot/compare/v1.0.2...v1.1.0) (2026-06-10)
 ## [1.211.2](https://github.com/anurag3407/career-pilot/compare/v1.211.1...v1.211.2) (2026-06-10)
 

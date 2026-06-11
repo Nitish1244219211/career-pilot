@@ -1,9 +1,16 @@
 import Groq from "groq-sdk";
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+let groqClient = null;
+
+const getGroqClient = () => {
+  if (!groqClient) {
+    groqClient = new Groq({ apiKey: process.env.GROQ_API_KEY || 'missing-key' });
+  }
+  return groqClient;
+};
 
 export const extractResumeFromPDF = async (base64PDF) => {
-  const completion = await groq.chat.completions.create({
+  const completion = await getGroqClient().chat.completions.create({
     model: "llama-3.3-70b-versatile",
     messages: [
       {
@@ -62,7 +69,7 @@ Write the cover letter with this structure:
 
 Output ONLY the cover letter text, nothing else.`;
 
-  const completion = await groq.chat.completions.create({
+  const completion = await getGroqClient().chat.completions.create({
     model: "llama-3.3-70b-versatile",
     messages: [{ role: "user", content: prompt }],
     max_tokens: 1200,

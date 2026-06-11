@@ -1,41 +1,143 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { interviewApi } from "../services/api";
+import QuestionAnalysisCard from "../components/interview/QuestionAnalysisCard";
+import { format } from "date-fns";
+import { Calendar, Clock, Trophy, ArrowLeft, Target, Briefcase } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 export default function InterviewReplay() {
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [interview, setInterview] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     loadInterview();
-  }, []);
+  }, [id]);
 
   const loadInterview = async () => {
     try {
-      const response = await interviewApi.getInterview(id);
-
-      console.log("Interview Details:", response);
-
+      setLoading(true);
+      const response = await interviewApi.getById(id);
       setInterview(response.data);
     } catch (error) {
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   };
 
+  const getScoreBadgeColor = (score) => {
+    if (score >= 80) return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30';
+    if (score >= 60) return 'bg-amber-500/20 text-amber-400 border-amber-500/30';
+    return 'bg-red-500/20 text-red-400 border-red-500/30';
+  };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-[50vh]">
+        <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
   if (!interview) {
-    return <p>Loading...</p>;
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-16 text-center">
+        <h2 className="text-2xl font-bold text-foreground mb-4">Interview Not Found</h2>
+        <button 
+          onClick={() => navigate('/interview-history')}
+          className="inline-flex items-center gap-2 text-primary hover:underline"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to History
+        </button>
+      </div>
+    );
   }
 
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-6">
-        Interview Replay
-      </h1>
+    <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+      {/* Header and Back Button */}
+      <div className="mb-6">
+        <button 
+          onClick={() => navigate('/interview-history')}
+          className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-4 transition-colors text-sm font-medium"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to History
+        </button>
+        
+        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight text-foreground flex items-center gap-3">
+              {interview.jobRole || "Mock Interview"}
+              <span className={`px-3 py-1 rounded-full text-sm font-bold border ${getScoreBadgeColor(interview.overallScore || 0)}`}>
+                {interview.overallScore || 0}% Score
+              </span>
+            </h1>
+            
+            <div className="flex flex-wrap items-center gap-4 mt-3 text-sm text-muted-foreground">
+              <div className="flex items-center gap-1.5">
+                <Calendar className="w-4 h-4" />
+                <span>{format(new Date(interview.completedAt || interview.createdAt), "MMMM d, yyyy")}</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Clock className="w-4 h-4" />
+                <span>{Math.round((interview.duration || 0) / 60)} minutes</span>
+              </div>
+              <div className="flex items-center gap-1.5">
+                <Target className="w-4 h-4" />
+                <span className="capitalize">{interview.experienceLevel} Level</span>
+              </div>
+              {interview.industry && (
+                <div className="flex items-center gap-1.5">
+                  <Briefcase className="w-4 h-4" />
+                  <span>{interview.industry}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <pre>
-        {JSON.stringify(interview, null, 2)}
-      </pre>
+      {/* Overall Feedback Section */}
+      {interview.overallFeedback && (
+        <div className="bg-card border border-border rounded-2xl p-6 shadow-sm mb-8">
+          <h3 className="font-semibold text-lg text-foreground mb-4 flex items-center gap-2">
+            <Trophy className="w-5 h-5 text-primary" />
+            Overall Feedback
+          </h3>
+          <div className="prose prose-sm dark:prose-invert max-w-none text-muted-foreground">
+            <ReactMarkdown>{interview.overallFeedback}</ReactMarkdown>
+          </div>
+        </div>
+      )}
+
+      {/* Answers / Question Analysis Cards */}
+      <div className="space-y-6">
+        <h3 className="font-semibold text-lg text-foreground flex items-center gap-2">
+          Detailed Analysis ({interview.answers?.length || 0} Questions)
+        </h3>
+        
+        {interview.answers && interview.answers.length > 0 ? (
+          <div className="space-y-4">
+            {interview.answers.map((answer, index) => (
+              <QuestionAnalysisCard 
+                key={answer.questionId || index} 
+                answer={answer} 
+                index={index} 
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-12 bg-muted/20 border border-dashed border-border rounded-2xl">
+            <p className="text-muted-foreground">No answers recorded for this session.</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

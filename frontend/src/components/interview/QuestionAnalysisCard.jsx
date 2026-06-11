@@ -14,17 +14,21 @@ export default function QuestionAnalysisCard({ answer, index }) {
     return 'bg-red-500/20 text-red-400 border-red-500/30';
   };
 
+  const getScoreTextColor = (score) => {
+    if (score >= 80) return 'text-emerald-400';
+    if (score >= 60) return 'text-amber-400';
+    return 'text-red-400';
+  };
+
   const getScoreLabel = (score) => {
-    if (score >= 90) return 'Exceptional';
     if (score >= 80) return 'Strong';
-    if (score >= 70) return 'Good';
-    if (score >= 60) return 'Needs Work';
-    return 'Significant Gaps';
+    if (score >= 60) return 'Good';
+    return 'Needs Work';
   };
 
   return (
     <div className="rounded-2xl bg-muted/30 border border-border/50 overflow-hidden transition-all duration-300 hover:border-border/80/50">
-      <button onClick={() => setExpanded(!expanded)} className="w-full p-4 flex items-center gap-4 text-left cursor-pointer">
+      <button type="button" onClick={() => setExpanded(!expanded)} className="w-full p-4 flex items-center gap-4 text-left cursor-pointer">
         <div className="w-10 h-10 rounded-xl bg-violet-500/20 border border-violet-500/30 flex items-center justify-center shrink-0">
           <span className="text-violet-400 font-bold text-sm">{index + 1}</span>
         </div>
@@ -32,7 +36,7 @@ export default function QuestionAnalysisCard({ answer, index }) {
           <p className="text-foreground font-medium truncate pr-4">{answer.question}</p>
           <div className="flex items-center gap-3 mt-1">
             <span className="text-xs text-muted-foreground">{answer.duration}s</span>
-            <span className={`text-xs ${avgScore >= 70 ? 'text-emerald-400' : avgScore >= 50 ? 'text-amber-400' : 'text-red-400'}`}>
+            <span className={`text-xs ${getScoreTextColor(avgScore)}`}>
               {getScoreLabel(avgScore)}
             </span>
           </div>

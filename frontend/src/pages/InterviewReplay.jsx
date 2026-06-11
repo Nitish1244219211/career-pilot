@@ -12,6 +12,7 @@ export default function InterviewReplay() {
 
   const [interview, setInterview] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -22,13 +23,15 @@ export default function InterviewReplay() {
   const loadInterview = async (signal) => {
     try {
       setLoading(true);
+      setError(null);
       const response = await interviewApi.getById(id);
       if (!signal.aborted) {
         setInterview(response.data);
       }
-    } catch (error) {
+    } catch (err) {
       if (!signal.aborted) {
-        console.error(error);
+        console.error(err);
+        setError(err.message || "Failed to fetch interview details");
         setInterview(null);
       }
     } finally {
@@ -48,6 +51,22 @@ export default function InterviewReplay() {
     return (
       <div className="flex items-center justify-center min-h-[50vh]">
         <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-16 text-center">
+        <h2 className="text-2xl font-bold text-foreground mb-4">Error Loading Interview</h2>
+        <p className="text-muted-foreground mb-6">{error}</p>
+        <button 
+          onClick={() => navigate('/interview-history')}
+          className="inline-flex items-center gap-2 text-primary hover:underline"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to History
+        </button>
       </div>
     );
   }
@@ -91,7 +110,7 @@ export default function InterviewReplay() {
             <div className="flex flex-wrap items-center gap-4 mt-3 text-sm text-muted-foreground">
               <div className="flex items-center gap-1.5">
                 <Calendar className="w-4 h-4" />
-                <span>{format(new Date(interview.completedAt || interview.createdAt), "MMMM d, yyyy")}</span>
+                <span>{interview.completedAt || interview.createdAt ? format(new Date(interview.completedAt || interview.createdAt), "MMMM d, yyyy") : "Date unavailable"}</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Clock className="w-4 h-4" />

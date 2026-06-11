@@ -14,18 +14,27 @@ export default function InterviewReplay() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    loadInterview();
+    const controller = new AbortController();
+    loadInterview(controller.signal);
+    return () => controller.abort();
   }, [id]);
 
-  const loadInterview = async () => {
+  const loadInterview = async (signal) => {
     try {
       setLoading(true);
       const response = await interviewApi.getById(id);
-      setInterview(response.data);
+      if (!signal.aborted) {
+        setInterview(response.data);
+      }
     } catch (error) {
-      console.error(error);
+      if (!signal.aborted) {
+        console.error(error);
+        setInterview(null);
+      }
     } finally {
-      setLoading(false);
+      if (!signal.aborted) {
+        setLoading(false);
+      }
     }
   };
 
@@ -111,7 +120,66 @@ export default function InterviewReplay() {
             Overall Feedback
           </h3>
           <div className="prose prose-sm dark:prose-invert max-w-none text-muted-foreground">
-            <ReactMarkdown>{interview.overallFeedback}</ReactMarkdown>
+            {typeof interview.overallFeedback === 'string' ? (
+              <ReactMarkdown>{interview.overallFeedback}</ReactMarkdown>
+            ) : (
+              <div className="space-y-4">
+                {interview.overallFeedback.summary && (
+                  <p className="mb-4 text-foreground leading-relaxed">{interview.overallFeedback.summary}</p>
+                )}
+                
+                {interview.overallFeedback.topStrengths && interview.overallFeedback.topStrengths.length > 0 && (
+                  <div className="mb-4">
+                    <h4 className="text-foreground font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                      Top Strengths
+                    </h4>
+                    <ul className="list-none space-y-1 pl-4">
+                      {interview.overallFeedback.topStrengths.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="text-emerald-500 mt-1 shrink-0">✓</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {interview.overallFeedback.areasToImprove && interview.overallFeedback.areasToImprove.length > 0 && (
+                  <div className="mb-4">
+                    <h4 className="text-foreground font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+                      Areas to Improve
+                    </h4>
+                    <ul className="list-none space-y-1 pl-4">
+                      {interview.overallFeedback.areasToImprove.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="text-amber-500 mt-1 shrink-0">→</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                {interview.overallFeedback.recommendations && interview.overallFeedback.recommendations.length > 0 && (
+                  <div>
+                    <h4 className="text-foreground font-semibold mb-2 flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-sky-500"></div>
+                      Recommendations
+                    </h4>
+                    <ul className="list-none space-y-1 pl-4">
+                      {interview.overallFeedback.recommendations.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="text-sky-500 mt-1 shrink-0">→</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       )}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { interviewApi } from "../services/api";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import { format, subDays, isAfter } from "date-fns";
@@ -179,10 +179,10 @@ export default function InterviewHistory() {
                 </div>
               ) : (
                 [...filteredHistory].reverse().map((session) => (
-                  <div
+                  <Link
                     key={session._id}
-                    onClick={() => navigate(`/interview-history/${session._id}`)}
-                    className="bg-card border border-border hover:border-primary/50 hover:shadow-md transition-all rounded-xl p-4 cursor-pointer group"
+                    to={`/interview-history/${session._id}`}
+                    className="block bg-card border border-border hover:border-primary/50 hover:shadow-md transition-all rounded-xl p-4 cursor-pointer group"
                   >
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-semibold text-foreground text-sm leading-tight group-hover:text-primary transition-colors line-clamp-1 flex-1 pr-2">
@@ -203,7 +203,7 @@ export default function InterviewHistory() {
                         <span>{Math.round((session.duration || 0) / 60)}m</span>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))
               )}
             </div>

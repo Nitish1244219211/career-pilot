@@ -1,5 +1,18 @@
 export const templates = [
   {
+    "id": "Fluid_Simulation_3D_WebGL",
+    "title": "Fluid Simulation 3D WebGL",
+    "category": "Portfolio",
+    "colorScheme": "Dark",
+    "layout": "Interactive",
+    "author": "kashviporwal-byte",
+    "views": 0,
+    "rating": 0,
+    "image": "/templates/Fluid_Simulation_3D_WebGL.png",
+    "createdAt": "2026-06-13",
+    "isComplete": true
+  },
+  {
     "id": "ASCII_Art_Terminal_Code",
     "title": "ASCII Art Terminal Code",
     "category": "Portfolio",

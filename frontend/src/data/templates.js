@@ -14,6 +14,19 @@ export const templates = [
 }
 ,
   {
+    "id": "Fluid_Simulation_3D_WebGL",
+    "title": "Fluid Simulation 3D WebGL",
+    "category": "Portfolio",
+    "colorScheme": "Dark",
+    "layout": "Interactive",
+    "author": "kashviporwal-byte",
+    "views": 0,
+    "rating": 0,
+    "image": "/templates/Fluid_Simulation_3D_WebGL.png",
+    "createdAt": "2026-06-13",
+    "isComplete": true
+  },
+  {
     "id": "ASCII_Art_Terminal_Code",
     "title": "ASCII Art Terminal Code",
     "category": "Portfolio",
@@ -2702,6 +2715,19 @@ export const templates = [
     "views": 1800,
     "rating": 5.0,
     "image": "/templates/Origami_Unfold_Step_Animation.png",
+    "createdAt": "2026-06-12",
+    "isComplete": true
+  },
+  {
+    "id": "Commercial_Pilot_Cockpit",
+    "title": "Commercial Pilot Cockpit",
+    "category": "Portfolio",
+    "colorScheme": "Dark",
+    "layout": "Interactive",
+    "author": "System",
+    "views": 2500,
+    "rating": 5.0,
+    "image": "/templates/Commercial_Pilot_Cockpit.png",
     "createdAt": "2026-06-12",
     "isComplete": true
   }

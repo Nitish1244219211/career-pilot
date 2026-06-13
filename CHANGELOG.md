@@ -1,3 +1,10 @@
+# [1.231.0](https://github.com/anurag3407/career-pilot/compare/v1.230.0...v1.231.0) (2026-06-13)
+
+
+### Features
+
+* Add Image Export for Resume Previews (Fixes [#3515](https://github.com/anurag3407/career-pilot/issues/3515)) ([7745d5c](https://github.com/anurag3407/career-pilot/commit/7745d5c2fefba9e69f0c19086a2b102222303c2c))
+
 # [1.230.0](https://github.com/anurag3407/career-pilot/compare/v1.229.0...v1.230.0) (2026-06-13)
 
 

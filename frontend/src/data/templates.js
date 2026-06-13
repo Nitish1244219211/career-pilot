@@ -14,8 +14,6 @@ export const templates = [
   "isComplete": true
 },
   {
-    "id": "Forensic_Investigator_Desk",
-    "title": "Forensic Investigator Desk",
     "id": "IKEA_Assembly_Manual",
     "title": "IKEA Assembly Manual",
     "category": "Portfolio",
@@ -28,6 +26,7 @@ export const templates = [
     "createdAt": "2026-06-13",
     "isComplete": true
   },
+  {
     "id": "Endless_Runner_Minigame",
     "title": "Endless Runner Minigame",
     "category": "Portfolio",
@@ -36,15 +35,10 @@ export const templates = [
     "author": "ShaktiShrey-01",
     "views": 0,
     "rating": 0,
-    "image": "/template-previews/Forensic_investigator_desk.png", 
-    "createdAt": "2026-06-11",
-    "isComplete": true
-  },
     "image": "/template-previews/Endless_Runner_Minigame.png",
     "createdAt": "2026-06-12",
-    isComplete: true
-}
-,
+    "isComplete": true
+  },
   {
     "id": "Fluid_Simulation_3D_WebGL",
     "title": "Fluid Simulation 3D WebGL",
@@ -2773,6 +2767,19 @@ export const templates = [
     "views": 3200,
     "rating": 5.0,
     "image": "/templates/Book_Page_Flip_3D_Render.png",
+    "createdAt": "2026-06-13",
+    "isComplete": true
+  },
+  {
+    "id": "Autumn_Forest_Leaf_Fall",
+    "title": "Autumn Forest Leaf Fall",
+    "category": "Portfolio",
+    "colorScheme": "Dark",
+    "layout": "Interactive",
+    "author": "Antigravity",
+    "views": 0,
+    "rating": 0,
+    "image": "/templates/Autumn_Forest_Leaf_Fall.png",
     "createdAt": "2026-06-13",
     "isComplete": true
   }

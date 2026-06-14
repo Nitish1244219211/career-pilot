@@ -52,14 +52,7 @@ export const templates = [
     "createdAt": "2026-06-11",
     "isComplete": true
   },
-  {
-    "image": "/template-previews/Endless_Runner_Minigame.png",
-    "createdAt": "2026-06-12",
-    isComplete: true,
-    "image": "/template-previews/Endless_Runner_Minigame.png",
-    "createdAt": "2026-06-12",
-    "isComplete": true
-  },
+
   {
     "id": "Git_Commit_History_Tree",
     "title": "Git Commit History Tree",
@@ -594,11 +587,6 @@ export const templates = [
     image: "/template-previews/Zine_Collage.png",
     createdAt: "2026-06-08",
     description: "An asymmetric, high-contrast scrapbook magazine layout featuring heavy ink borders, rotated clipping frames, and retro label-maker accents.",
-    author: "System",
-    views: 0,
-    rating: 4.5,
-    image: "/template-previews/Zine_Collage.png",
-    createdAt: "2026-06-01",
     isComplete: true
   },
   

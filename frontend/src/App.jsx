@@ -34,6 +34,7 @@ import GlassmorphismTemplate from "./components/portfolio/templates/Glassmorphis
 
 import JobTracker from './pages/JobTracker';
 
+const Outreach = lazy(() => import('./pages/Outreach'));
 const Community = lazy(() => import('./pages/Community'));
 const Login = lazy(() => import("./pages/Login"));
 const Register = lazy(() => import("./pages/Register"));
@@ -336,6 +337,7 @@ function AppRoutes() {
 />
         <Route path="/job-alerts" element={<ProtectedRoute><Suspense fallback={<LoadingScreen label="Loading Job Alerts..." />}><JobAlerts /></Suspense></ProtectedRoute>} />
         <Route path="/job-tracker" element={<ProtectedRoute><Suspense fallback={<LoadingScreen label="Loading Job Tracker..." />}><JobTracker /></Suspense></ProtectedRoute>} />
+        <Route path="/outreach" element={<ProtectedRoute><Suspense fallback={<LoadingScreen label="Loading Outreach..." />}><Outreach /></Suspense></ProtectedRoute>} />
         <Route 
   path="/community" 
   element={

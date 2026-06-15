@@ -2910,7 +2910,6 @@ export const templates = [
     "createdAt": "2026-06-07",
     "isComplete": true
   },
-
   {
     id: "Accordion_Fold_Brochure",
     title: "Accordion Fold Brochure",
@@ -3000,6 +2999,19 @@ export const templates = [
     "image": "/templates/Autumn_Forest_Leaf_Fall.png",
     "createdAt": "2026-06-13",
     "isComplete": true
+  },
+  {
+  "id": "Cyber_Security_Red_Team",
+  "title": "Cyber Security Red Team",
+  "category": "Portfolio",
+  "colorScheme": "Dark",
+  "layout": "Dashboard",
+  "author": "Ayush Srivastava",
+  "views": 0,
+  "rating": 5.0,
+  "image": "/templates/Cyber_Security_Red_Team.png",
+  "createdAt": "2026-06-14",
+  "isComplete": true
   }
 ];
 

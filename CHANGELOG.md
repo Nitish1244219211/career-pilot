@@ -1,3 +1,19 @@
+## [1.246.1](https://github.com/anurag3407/career-pilot/compare/v1.246.0...v1.246.1) (2026-06-15)
+
+
+### Bug Fixes
+
+* theme variables, scrollbar cleanup, and glow effects in index.css ([4c7a80c](https://github.com/anurag3407/career-pilot/commit/4c7a80c2549d25c11c46e8c16a242e42ea422feb))
+
+# [1.246.0](https://github.com/anurag3407/career-pilot/compare/v1.245.0...v1.246.0) (2026-06-15)
+
+
+### Features
+
+* add staging deployment github action [#2791](https://github.com/anurag3407/career-pilot/issues/2791) ([8ad39c9](https://github.com/anurag3407/career-pilot/commit/8ad39c9437ae0af0b5be579e183626b086adaa58))
+* add staging deployment workflow [#2791](https://github.com/anurag3407/career-pilot/issues/2791) ([2ce6491](https://github.com/anurag3407/career-pilot/commit/2ce6491c103c83f53a67c27b80604c67f2d5ce28))
+* add staging deployment workflow [#2791](https://github.com/anurag3407/career-pilot/issues/2791) ([158999f](https://github.com/anurag3407/career-pilot/commit/158999f8b81a30b7a44f89ac0f485e84c9a7affc))
+
 # [1.245.0](https://github.com/anurag3407/career-pilot/compare/v1.244.3...v1.245.0) (2026-06-15)
 
 

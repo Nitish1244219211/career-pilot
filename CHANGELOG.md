@@ -1,3 +1,10 @@
+## [1.248.4](https://github.com/anurag3407/career-pilot/compare/v1.248.3...v1.248.4) (2026-06-16)
+
+
+### Bug Fixes
+
+* remove duplicate REDIS_URL definition from backend .env.example ([#3474](https://github.com/anurag3407/career-pilot/issues/3474)) ([8bb366e](https://github.com/anurag3407/career-pilot/commit/8bb366e1e9498eb2efc2887957f29769034b0d8d))
+
 ## [1.248.3](https://github.com/anurag3407/career-pilot/compare/v1.248.2...v1.248.3) (2026-06-16)
 
 

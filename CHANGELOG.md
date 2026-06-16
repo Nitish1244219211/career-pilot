@@ -1,3 +1,10 @@
+## [1.248.5](https://github.com/anurag3407/career-pilot/compare/v1.248.4...v1.248.5) (2026-06-16)
+
+
+### Bug Fixes
+
+* align backend default port with documented .env files ([#3487](https://github.com/anurag3407/career-pilot/issues/3487)) ([2837ce7](https://github.com/anurag3407/career-pilot/commit/2837ce7c5202925cf152d717418dd9c7f9e94532)), closes [#3288](https://github.com/anurag3407/career-pilot/issues/3288)
+
 ## [1.248.4](https://github.com/anurag3407/career-pilot/compare/v1.248.3...v1.248.4) (2026-06-16)
 
 

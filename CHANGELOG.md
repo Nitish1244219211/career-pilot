@@ -1,3 +1,10 @@
+## [1.248.2](https://github.com/anurag3407/career-pilot/compare/v1.248.1...v1.248.2) (2026-06-16)
+
+
+### Bug Fixes
+
+* resolve ATS score runtime crashes in ResumeBuilder ([2f5c679](https://github.com/anurag3407/career-pilot/commit/2f5c6798be5933024c17bdd6c4006663fbcba796))
+
 ## [1.248.1](https://github.com/anurag3407/career-pilot/compare/v1.248.0...v1.248.1) (2026-06-15)
 
 

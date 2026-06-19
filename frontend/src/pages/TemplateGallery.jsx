@@ -3,8 +3,6 @@ import { useTheme } from "../hooks/useTheme";
 import Navbar from "../components/Navbar";
 import DeployModal from "../components/portfolio/DeployModal";
 import ThemeSelector from "../components/portfolio/ThemeSelector";
-import InspiredClydeDSouza from "../components/portfolio/templates/Inspired_Clyde_DSouza";
-import InspiredDelba from "../components/portfolio/templates/Inspired_Delba";
 import { templates } from '../data/templates';
 import { motion, AnimatePresence } from "framer-motion";
 import { Moon, Sun, ChevronDown, Check, Eye, Star, Sparkles, X } from "lucide-react";
@@ -587,35 +585,7 @@ export default function TemplateGallery() {
 
 
 
-      </div>
-
-      {/* Inspired Clyde DSouza - sandboxed fixed-nav frame */}
-      {/* <div className="mt-12">
-        <div className="mb-4 flex items-center gap-3 px-1">
-          <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-bold uppercase tracking-widest text-emerald-500 border border-emerald-500/25">
-            🧑 Clyde D'Souza Inspired
-          </span>
-          <h2 className="text-lg font-semibold text-foreground/70">Inspired by Clyde D'Souza - Vibrant Split Pane</h2>
-        </div>
-        <div className="rounded-2xl border border-emerald-500/15"
-          style={{ height: 640, overflowY: "auto", overflowX: "hidden", transform: "translate(0)", position: "relative", backgroundColor: "#f9fafb" }}>
-          <InspiredClydeDSouza />
-        </div>
-      </div> */}
-
-      {/* Inspired Delba - sandboxed fixed-nav frame */}
-      {/* <div className="mt-12">
-        <div className="mb-4 flex items-center gap-3 px-1">
-          <span className="rounded-full bg-slate-500/15 px-3 py-1 text-xs font-bold uppercase tracking-widest text-slate-500 border border-slate-500/25">
-            ✨ Delba Inspired
-          </span>
-          <h2 className="text-lg font-semibold text-foreground/70">Inspired by Delba - Minimalist Typography</h2>
-        </div>
-        <div className="rounded-2xl border border-slate-500/15"
-          style={{ height: 640, overflowY: "auto", overflowX: "hidden", transform: "translate(0)", position: "relative", backgroundColor: "#FAFAFA" }}>
-          <InspiredDelba />
-        </div>
-      </div> */}
+      </div>    
 
     </div>
   );

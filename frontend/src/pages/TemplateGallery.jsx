@@ -3,6 +3,8 @@ import { useTheme } from "../hooks/useTheme";
 import Navbar from "../components/Navbar";
 import DeployModal from "../components/portfolio/DeployModal";
 import ThemeSelector from "../components/portfolio/ThemeSelector";
+import InspiredClydeDSouza from "../components/portfolio/templates/Inspired_Clyde_DSouza";
+import InspiredDelba from "../components/portfolio/templates/Inspired_Delba";
 import { templates } from '../data/templates';
 import { motion, AnimatePresence } from "framer-motion";
 import { Moon, Sun, ChevronDown, Check, Eye, Star, Sparkles, X } from "lucide-react";
@@ -486,7 +488,7 @@ export default function TemplateGallery() {
 
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-bold">Template Gallery</h1>
-          <button
+          {/* <button
             onClick={toggleTheme}
             className="p-2 rounded-xl bg-muted hover:bg-accent border border-border text-foreground transition-all cursor-pointer overflow-hidden relative group"
             aria-label="Toggle theme"
@@ -506,7 +508,7 @@ export default function TemplateGallery() {
                 )}
               </motion.div>
             </AnimatePresence>
-          </button>
+          </button> */}
         </div>
 
         <div className="mb-8 rounded-2xl border border-border bg-card p-5">
@@ -588,7 +590,7 @@ export default function TemplateGallery() {
       </div>
 
       {/* Inspired Clyde DSouza - sandboxed fixed-nav frame */}
-      <div className="mt-12">
+      {/* <div className="mt-12">
         <div className="mb-4 flex items-center gap-3 px-1">
           <span className="rounded-full bg-emerald-500/15 px-3 py-1 text-xs font-bold uppercase tracking-widest text-emerald-500 border border-emerald-500/25">
             🧑 Clyde D'Souza Inspired
@@ -599,10 +601,10 @@ export default function TemplateGallery() {
           style={{ height: 640, overflowY: "auto", overflowX: "hidden", transform: "translate(0)", position: "relative", backgroundColor: "#f9fafb" }}>
           <InspiredClydeDSouza />
         </div>
-      </div>
+      </div> */}
 
       {/* Inspired Delba - sandboxed fixed-nav frame */}
-      <div className="mt-12">
+      {/* <div className="mt-12">
         <div className="mb-4 flex items-center gap-3 px-1">
           <span className="rounded-full bg-slate-500/15 px-3 py-1 text-xs font-bold uppercase tracking-widest text-slate-500 border border-slate-500/25">
             ✨ Delba Inspired
@@ -613,7 +615,7 @@ export default function TemplateGallery() {
           style={{ height: 640, overflowY: "auto", overflowX: "hidden", transform: "translate(0)", position: "relative", backgroundColor: "#FAFAFA" }}>
           <InspiredDelba />
         </div>
-      </div>
+      </div> */}
 
     </div>
   );

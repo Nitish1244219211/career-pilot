@@ -1,3 +1,10 @@
+# [1.264.0](https://github.com/anurag3407/career-pilot/compare/v1.263.0...v1.264.0) (2026-06-22)
+
+
+### Features
+
+* **devops:** add database migration framework ([#4293](https://github.com/anurag3407/career-pilot/issues/4293)) ([634d4ae](https://github.com/anurag3407/career-pilot/commit/634d4aed4f46c6e6f2a729cf2b2df897f76bca14))
+
 # [1.263.0](https://github.com/anurag3407/career-pilot/compare/v1.262.0...v1.263.0) (2026-06-22)
 
 

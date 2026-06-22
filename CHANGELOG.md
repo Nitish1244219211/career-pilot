@@ -1,3 +1,10 @@
+# [1.265.0](https://github.com/anurag3407/career-pilot/compare/v1.264.0...v1.265.0) (2026-06-22)
+
+
+### Features
+
+* **jobs:** add cross-source job deduplication engine ([#4188](https://github.com/anurag3407/career-pilot/issues/4188)) ([e559cc2](https://github.com/anurag3407/career-pilot/commit/e559cc2055cb13d566262c3765ed51cfd476056c))
+
 # [1.264.0](https://github.com/anurag3407/career-pilot/compare/v1.263.0...v1.264.0) (2026-06-22)
 
 

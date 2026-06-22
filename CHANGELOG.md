@@ -1,3 +1,10 @@
+## [1.260.1](https://github.com/anurag3407/career-pilot/compare/v1.260.0...v1.260.1) (2026-06-22)
+
+
+### Bug Fixes
+
+* implement CSRF protection for Socket.IO and BullBoard ([#4283](https://github.com/anurag3407/career-pilot/issues/4283)) ([45284f1](https://github.com/anurag3407/career-pilot/commit/45284f16007b7f81fb52dddb283323e30e24bc66))
+
 ## [1.251.1](https://github.com/anurag3407/career-pilot/compare/v1.251.0...v1.251.1) (2026-06-20)
 
 

@@ -369,6 +369,19 @@ body {
     color: var(--muted-foreground);
   }
 
+  @keyframes shine {
+    0% {
+      background-position: 100%;
+    }
+    100% {
+      background-position: -100%;
+    }
+  }
+  .animate-shine {
+    animation: shine 5s linear infinite;
+  }
+}
+
   .nav-link-active {
     background-color: color-mix(in srgb, var(--primary) 10%, transparent);
     color: var(--primary);

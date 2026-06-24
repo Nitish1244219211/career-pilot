@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import {describe, test, expect} from 'vitest'
-import moduleName, { templates } from '../data/templates'
+import { templates } from '../data/templates'
 
 const templateDir = path.resolve('src/components/portfolio/templates')
 // Array of all the ids of templates from template.js
@@ -23,7 +23,7 @@ describe('templates validation',() => {
       expect(
         duplicates 
         // ,`Duplicate template ids found\n ${duplicates}\n`
-      ).toEqual()
+      ).toEqual([])
     
     })
 
@@ -31,8 +31,11 @@ describe('templates validation',() => {
     // To check templates having directory in portfolio/templates 
     // but not info in template.js to get rendered
     test('All template folders are registered in template.js', () => {
-      const folders = fs.readdirSync(templateDir)
-
+      const folders = fs
+        .readdirSync(templateDir, { withFileTypes: true })
+        .filter(item => item.isDirectory())
+        .map(item => item.name)
+        
       //stores all the templates not registered in template.js
       const missingTemplates = folders.filter(folder => !ids.includes(folder))
 

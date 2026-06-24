@@ -1,3 +1,10 @@
+## [1.267.2](https://github.com/anurag3407/career-pilot/compare/v1.267.1...v1.267.2) (2026-06-24)
+
+
+### Bug Fixes
+
+* **frontend:** polish portfolio builder demo section ([#4325](https://github.com/anurag3407/career-pilot/issues/4325)) ([2814b5f](https://github.com/anurag3407/career-pilot/commit/2814b5f551b6a6129948fc17f7333225cadbc4b4))
+
 ## [1.267.1](https://github.com/anurag3407/career-pilot/compare/v1.267.0...v1.267.1) (2026-06-24)
 
 
